@@ -2,19 +2,20 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[])
-{
+{           
     
-    int input;
-     
-    printf("정수 하나를 입력하시오 :");
-    scanf("%d", &input);
+    char c;
+    int num = 0;
     
-    if ( input>=0 )
-    printf("절대값은 %d입니다.\n", input);
+    printf("input a string: ");
     
-    else
-    printf("절대값은 %d입니다.\n", -input ); 
-
+    while ((c=getchar()) != '\n')
+    {
+          if ( c >= '0' && c <= '9' )
+          num = num + 1;
+    }
+          
+    printf("the number of digits is %d\n.", num);
 
   system("PAUSE");	
   return 0;
